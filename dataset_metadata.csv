@@ -1,0 +1,19 @@
+File_Name,Description,File_Type,Data_Source_Origin,Date_Created,Variables,Units,Notes
+LandsatTS_Phenology_Min10Obs_VegClassified.csv,"Intermediate Landsat NDVI phenology dataset (â‰¥10 obs) with vegetation classification, used to generate Figure S4 (histogram comparing cross-calibrated and non-cross-calibrated datasets)",CSV,"GEE, downloaded and processed using LandsatTS R package",15/08/2025,"sample.id, year, latitude, longitude, NVC1, IMP1, NVC0, NVCs, Vegetation_Group, n.obs, ndvi.gs.avg, ndvi.gs.med, ndvi.gs.q90, ndvi.max, ndvi.max.lwr, ndvi.max.upr, ndvi.max.doy",NDVI: unitless (-1 to 1 scale); Latitude/Longitude: decimal degrees; doy: day of year,Not the final dataset — used for cross-calibration comparison (Figure S4)
+LandsatTS_Phenology_Min10Obs_Non_XCalibrated.csv,"Intermediate Landsat NDVI phenology dataset (â‰¥10 obs) without cross-calibration, used in Figure S4",CSV,"GEE, downloaded and processed using LandsatTS R package",15/08/2025,"sample.id, year, latitude, longitude, n.obs, ndvi.gs.avg, ndvi.gs.med, ndvi.gs.q90, ndvi.max, ndvi.max.lwr, ndvi.max.upr, ndvi.max.doy",NDVI: unitless (-1 to 1 scale); Latitude/Longitude: decimal degrees; doy: day of year,Used for cross-calibration comparison
+Landsat_Model_Dataset.csv,Landsat NDVI dataset used for Landsat-based statistical models,CSV,"GEE, downloaded and processed using LandsatTS package; MODIS MCD12Q2 phenology product, downloaded and processed using MODISTools R package",15/08/2025,"sample.id, year, latitude, longitude, NVC1, IMP1, NVC0, NVCs, Vegetation_Group, n.obs, ndvi.gs.avg, ndvi.gs.med, ndvi.gs.q90, ndvi.max, ndvi.max.lwr, ndvi.max.upr, ndvi.max.doy",NDVI: unitless (-1 to 1 scale); Latitude/Longitude: decimal degrees; doy: day of year,Used in Landsat NDVI model analyses
+MCD12Q2_MasterFile_Inc_VegTypes_2.csv,"MODIS EVI phenology dataset with vegetation type assignments, used for MODIS-based models",CSV,MODIS MCD12Q2 phenology product (2001 - 2023),15/08/2025,"xllcorner, yllcorner, cellsize, nrows, ncols, latitude, longitude, site, product, start, end, complete, modis_date, calendar_date, tile, proc_date, pixel, Vegetation_Code, Vegetation_Group, EVI_Amplitude, EVI_Minimum, EVI_Area, Dormancy, Greenup, MidGreenup, MidGreendown, Maturity, Senescence, EVI_Maximum",EVI: unitless (-1 to 1 scale); Phenology dates in DOY,Used in MODIS EVI model analyses
+Landsat_MODIS_Combined_Model_Dataset.csv,Combined Landsat NDVI and MODIS EVI phenology dataset for cross-sensor model comparisons,CSV,Merged Landsat NDVI metrics with MODIS MCD12Q2 phenology metrics,15/08/2025,"MODIS columns (see MCD12Q2_MasterFile_Inc_VegTypes_2) + year, lat, long, grid_id, ndvi_max, ndvi_max_doy",NDVI/EVI: unitless (-1 to 1 scale); lat/long: decimal degrees; doy: day of year,Used in comparisons between NDVI and EVI; Landsat data has been downscaled to MODIS (500 m) resolution 
+StCp_JulyAug.csv,Field-measured average live standing crop (Julyâ€“August) in selected vegetation plots,CSV,Field data from the Rum red deer study,15/08/2025,"Year, Plot, JunJulStCp, n_mon",Standing crop: g/m²; n_mon: number of monthls used in measurement,Observational vegetation biomass data
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
